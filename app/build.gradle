@@ -1,0 +1,12 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.goku.assistant'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.goku.assistant"
+        minSdk 26
+        targetSdk 34
+        versionCode 2
+        versionName "2.0-GodMode"
+    }
+}
