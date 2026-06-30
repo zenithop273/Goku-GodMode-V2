@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient" android:padding="16dp">
+
+    <TextView android:id="@+id/tvGreeting" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Welcome Back, Boss." android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold" android:layout_marginTop="30dp"/>
+    
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_below="@id/tvGreeting" android:text="System: Online | AI Core: Friday/Goku" android:textColor="@color/neon_cyan" android:layout_marginTop="8dp"/>
+
+    <!-- Glassmorphism Card for CPU/RAM -->
+    <LinearLayout android:id="@+id/cardStats" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_below="@id/tvStatus" android:background="@drawable/glass_card" android:orientation="horizontal"
+        android:padding="16dp" android:layout_marginTop="30dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="RAM: 45%\nStable" android:textColor="@color/white" android:textStyle="bold"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="CPU: 12%\nCool" android:textColor="@color/neon_yellow" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Glassmorphism Card for Console -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@id/cardStats" android:layout_above="@id/navBar" android:background="@drawable/glass_card"
+        android:orientation="vertical" android:padding="16dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HUNT VAULT / RECON OUTPUT" android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp">
+            <TextView android:id="@+id/tvConsole" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="[+] Initializing God-Mode...\n[+] Loading LLM API Keys...\n[+] Connecting to Tab A8 Sensors...\n" android:textColor="@color/white" android:typeface="monospace" android:textSize="14sp"/>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Floating Nav Bar -->
+    <LinearLayout android:id="@+id/navBar" android:layout_width="match_parent" android:layout_height="60dp"
+        android:layout_alignParentBottom="true" android:background="@drawable/glass_card" android:orientation="horizontal" android:gravity="center">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HOME" android:textColor="@color/neon_cyan" android:layout_marginEnd="30dp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VAULT" android:textColor="@color/text_dim" android:layout_marginEnd="30dp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnStartGoku" android:layout_width="wrap_content" android:layout_height="40dp" android:text="START AI" android:backgroundTint="@color/neon_yellow" android:textColor="#000"/>
+    </LinearLayout>
+</RelativeLayout>
